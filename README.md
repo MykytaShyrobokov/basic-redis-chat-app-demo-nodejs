@@ -2,8 +2,9 @@
 
 Showcases how to impliment chat app in Node.js, Socket.IO and Redis. This example uses **pub/sub** feature combined with web-sockets for implementing the message communication between client and server.
 
-<a href="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot000.png"><img src="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot000.png" width="49%"></a>
-<a href="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot001.png"><img src="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot001.png" width="49%"></a>
+<a href="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot000.png" target="_blank" rel="noopener noreferrer"><img src="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot000.png" width="49%"></a>
+<a href="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot001.png" target="_blank" rel="noopener noreferrer"><img src="https://github.com/redis-developer/basic-redis-chat-app-demo-nodejs/raw/main/docs/screenshot001.png" width="49%"></a>
+
 
 # Overview video
 
@@ -287,15 +288,17 @@ yarn start
 #### Deploy to Heroku
 
 <p>
-    <a href="https://heroku.com/deploy" target="_blank">
+    <a href="https://heroku.com/deploy" target="_blank" rel="noopener noreferrer">
         <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heorku" />
     </a>
 </p>
 
+
 #### Deploy to Google Cloud
 
 <p>
-    <a href="https://deploy.cloud.run" target="_blank">
+    <a href="https://deploy.cloud.run" target="_blank" rel="noopener noreferrer">
         <img src="https://deploy.cloud.run/button.svg" alt="Run on Google Cloud" width="150px"/>
     </a>
 </p>
+

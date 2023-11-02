@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      REDIS_ENDPOINT_URL: "redis:6379"
+      REDIS_PASSWORD: "your_redis_password"
+    depends_on:
+      - redis
+
+  frontend:
+    build: client
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_BACKEND_URL: "http://localhost:4000"
+
+  redis:
+    image: "redis/redis-stack:latest"  # Change this
+    ports:
+      - "6380:6379"
+      - "8002:8001"  # Added this if you need to expose 8001 to the host as 8002.
+    environment:
+      REDIS_PASSWORD: "your_redis_password"
+      # Add other necessary environment variables for your redis-stack container if any.

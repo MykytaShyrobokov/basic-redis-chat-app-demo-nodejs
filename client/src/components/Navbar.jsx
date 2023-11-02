@@ -1,39 +1,44 @@
-// @ts-check
 import React, { useEffect, useState } from "react";
 import { getButtonLinks } from "../api";
 
+/**
+ * @typedef {Object} LinkType
+ * @property {string} [heroku]
+ * @property {string} [google_cloud]
+ * @property {string} [vercel]
+ * @property {string} [github]
+ */
+
 const Navbar = () => {
-  /**
-   * @type {[{
-   *  heroku?: string;
-   *  google_cloud?: string;
-   *  vercel?: string;
-   *  github?: string;
-   *  }, React.Dispatch<any>]}
-   */
-  const [links, setLinks] = useState(null);
-  useEffect(() => {
-    getButtonLinks().then(setLinks);
-  }, []);
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white">
-      <span className="navbar-brand">Redis chat demo</span>
-      {links !== null ? (
-        <span className="navbar-text">
-          {links.github && <GithubIcon link={links.github} />}
-        </span>
-      ) : (
-        <></>
-      )}
-    </nav>
-  );
+    /** 
+     * @type {[LinkType | null, React.Dispatch<React.SetStateAction<LinkType | null>>]}
+     */
+    const [links, setLinks] = useState(null);
+    
+    useEffect(() => {
+        getButtonLinks().then(setLinks);
+    }, []);
+    
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light bg-white">
+            <span className="navbar-brand">Redis chat demo</span>
+            {links !== null ? (
+                <span className="navbar-text">
+                    {links.github && <GithubIcon link={links.github} />}
+                </span>
+            ) : (
+                <></>
+            )}
+        </nav>
+    );
 };
+
 
 const GithubIcon = ({ link }) => (
   <a
     href={link}
-    // eslint-disable-next-line
     target="_blank"
+    rel="noopener noreferrer" // This attribute will prevent the security risk
     title="Github"
   >
     <svg
