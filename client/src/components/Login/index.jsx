@@ -41,12 +41,12 @@ export default function Login({ onLogIn }) {
               }}
             >
               <div className="col text-primary text-left">
-                <h3 className="font-size-15">Welcome Back !</h3>
+                <h3 className="font-size-15">"New chat test"</h3>
                 <p>Sign in to continue</p>
               </div>
               <div className="col align-self-end">
                 <img
-                  alt="welcome back"
+                  alt="New chat test"
                   style={{ maxWidth: "100%" }}
                   src={`${process.env.PUBLIC_URL}/welcome-back.png`}
                 />

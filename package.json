@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@types/socket.io": "^2.1.12",
-    "nodemon": "^2.0.6",
-    "@babel/plugin-proposal-private-property-in-object": "^latest_version_here"
+    "nodemon": "^2.0.6"
   }
 }
